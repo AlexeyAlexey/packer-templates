@@ -1,3 +1,5 @@
+copied from https://github.com/kaorimatz/packer-templates.git 
+
 # packer-templates
 
 [![Travis](https://img.shields.io/travis/kaorimatz/packer-templates.svg?style=flat-square)](https://travis-ci.org/kaorimatz/packer-templates)
@@ -12,11 +14,7 @@ Clone the repository:
 
 Build a machine image from the template in the repository:
 
-    $ packer build -only=virtualbox-iso archlinux-x86_64.json
-
-Add the built box to Vagrant:
-
-    $ vagrant box add archlinux-x86_64 archlinux-x86_64-virtualbox.box
+    $ packer build -only=qemu ubuntu-18.04-amd64.json
 
 ## Configuration
 
@@ -42,3 +40,6 @@ Build an uncompressed Arch Linux vagrant box with a 4GB hard disk using the Virt
 You can also use the pre-built boxes hosted on [Atlas](https://atlas.hashicorp.com/kaorimatz).
 
     $ vagrant box add kaorimatz/archlinux-x86_64
+
+
+packer build -only=qemu ubuntu-18.04-amd64.json
