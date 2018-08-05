@@ -33,7 +33,7 @@ You can configure each template to match your requirements by setting the follow
 
 Build an uncompressed Arch Linux vagrant box with a 4GB hard disk using the VirtualBox provider:
 
-    $ packer build -only=virtualbox-iso -var compression_level=0 -var disk_size=4000 archlinux-x86_64.json
+    $ packer build -only=qemu ubuntu-18.04-amd64.json -var compression_level=0 -var disk_size=4000 archlinux-x86_64.json
 
 ## Pre-built Boxes
 
@@ -42,4 +42,13 @@ You can also use the pre-built boxes hosted on [Atlas](https://atlas.hashicorp.c
     $ vagrant box add kaorimatz/archlinux-x86_64
 
 
-packer build -only=qemu ubuntu-18.04-amd64.json
+    $ packer build -only=qemu ubuntu-18.04-amd64.json
+    $ packer build -only=qemu ubuntu-17.10-amd64.json
+
+
+
+    $ vagrant box add --name ubuntu-18.04-server-amd64-libvirt ubuntu-18.04-server-amd64-libvirt.box --provider=libvirt
+
+
+    $ vagrant box remove box_name
+    $ rm /var/lib/libvirt/images/box_name
