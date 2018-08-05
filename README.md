@@ -35,10 +35,6 @@ Build an uncompressed Arch Linux vagrant box with a 4GB hard disk using the Virt
 
     $ packer build -only=qemu ubuntu-18.04-amd64.json -var compression_level=0 -var disk_size=4000 archlinux-x86_64.json
 
-## Pre-built Boxes
-
-You can also use the pre-built boxes hosted on [Atlas](https://atlas.hashicorp.com/kaorimatz).
-
     $ vagrant box add kaorimatz/archlinux-x86_64
 
 
