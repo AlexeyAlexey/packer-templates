@@ -70,6 +70,7 @@
     "scripts": [
       "scripts/ubuntu/apt.sh",
       "scripts/ubuntu/upgrade.sh",
+      "scripts/ubuntu/preinstalled_packages.sh",
       "scripts/ubuntu/sshd.sh",
       "scripts/ubuntu/networking.sh",
       "scripts/ubuntu/sudoers.sh",

@@ -45,6 +45,14 @@ Build an uncompressed Arch Linux vagrant box with a 4GB hard disk using the Virt
 
     $ vagrant box add --name ubuntu-18.04-server-amd64-libvirt ubuntu-18.04-server-amd64-libvirt.box --provider=libvirt
 
+You can faced with the follow problem after adding box
+https://bugzilla.redhat.com/show_bug.cgi?id=1474353
+
+```console
+$ systemctl restart libvirtd
+```
 
     $ vagrant box remove box_name
     $ rm /var/lib/libvirt/images/box_name
+
+
